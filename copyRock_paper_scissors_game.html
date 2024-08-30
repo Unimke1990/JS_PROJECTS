@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock.Paper.Scissors</title>
+</head>
+<body>
+    <p>Rock Paper Scissors</p>
+
+    <button onclick="
+        const randomNumber = (Math.random());
+
+        let computerMove = '';
+
+        if (randomNumber >= 0 && randomNumber < 1/3) {
+            computerMove = 'Rock';
+        } else if (randomNumber >= 1/3 && randomNumber < 2/3){
+            computerMove = 'Paper';
+        } else if (randomNumber >= 2/3 && randomNumber < 1) {
+            computerMove = 'Scissors';
+        }
+        // console.log(computerMove);
+
+        let result = '';
+        if (computerMove === 'Rock') {
+            result = 'Tie';
+        } else if (computerMove === 'Paper') {
+            result = 'You Lose'; 
+        } else if (computerMove === 'Scissors'){
+            result = 'You Win';
+        }
+
+        if (result === 'You Lose') {
+             alert(`You picked Rock, computer picked ${computerMove}.  ${result}. Your overall record is:  Wins: ${score.wins}, Losses: ${score.losses+= 1}, Ties: ${score.ties}`);
+        }
+
+        else if (result === 'Tie') {
+             alert(`You picked Rock, computer picked ${computerMove}.  ${result}. Your overall record is:  Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties+= 1}`);
+        }
+
+        else if (result === 'You Win') {
+             alert(`You picked Rock, computer picked ${computerMove}.  ${result}. Your overall record is:  Wins: ${score.wins+= 1}, Losses: ${score.losses}, Ties: ${score.ties}`);
+        }
+            ">Rock</button>
+
+    <button onclick="
+        const randommNumber = (Math.random());
+
+        let compputerMove = '';
+
+        if (randommNumber >= 0 && randommNumber < 1/3) {
+            compputerMove = 'Rock';
+        } else if (randommNumber >= 1/3 && randommNumber < 2/3){
+            compputerMove = 'Paper';
+        } else if (randommNumber >= 2/3 && randommNumber < 1) {
+            compputerMove = 'Scissors';
+        }
+        // console.log(compputerMove);
+
+        let ressult = '';
+        if (compputerMove === 'Rock') {
+            ressult = 'You Win';
+        } else if (compputerMove === 'Paper') {
+            ressult = 'Tie'; 
+        } else if (compputerMove === 'Scissors'){
+            ressult = 'You Lose';
+        }
+     
+        if (ressult === 'You Lose') {
+             alert(`You picked Paper, computer picked ${compputerMove}.  ${ressult}. Your overall record is:  Wins: ${score.wins}, Losses: ${score.losses+= 1}, Ties: ${score.ties}`);
+        }
+
+        else if (ressult === 'Tie') {
+             alert(`You picked Paper, computer picked ${compputerMove}.  ${ressult}. Your overall record is:  Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties+= 1}`);
+        }
+
+        else if (ressult === 'You Win') {
+             alert(`You picked Paper, computer picked ${compputerMove}.  ${ressult}. Your overall record is:  Wins: ${score.wins+= 1}, Losses: ${score.losses}, Ties: ${score.ties}`);
+        }
+
+        ">Paper</button>
+
+    <button onclick="
+        const randommmNumber = (Math.random());
+
+        let comppputerMove = '';
+
+        if (randommmNumber >= 0 && randommmNumber < 1/3) {
+            comppputerMove = 'Rock';
+        } else if (randommmNumber >= 1/3 && randommmNumber < 2/3){
+            comppputerMove = 'Paper';
+        } else if (randommmNumber >= 2/3 && randommmNumber < 1) {
+            comppputerMove = 'Scissors';
+        }
+
+        let resssult = '';
+        if (comppputerMove === 'Rock') {
+            resssult = 'You Lose';
+        } else if (comppputerMove === 'Paper') {
+            resssult = 'You Win'; 
+        } else if (comppputerMove === 'Scissors') {
+            resssult = 'Tie';
+        }
+
+        if (resssult === 'You Lose') {
+             alert(`You picked Scissors, computer picked ${comppputerMove}.  ${resssult}. Your overall record is:  Wins: ${score.wins}, Losses: ${score.losses+= 1}, Ties: ${score.ties}`);
+        }
+
+        else if (resssult === 'Tie') {
+             alert(`You picked Scissors, computer picked ${comppputerMove}.  ${resssult}. Your overall record is:  Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties+= 1}`);
+        }
+
+        else if (resssult === 'You Win') {
+             alert(`You picked Scissors, computer picked ${comppputerMove}.  ${resssult}. Your overall record is:  Wins: ${score.wins+= 1}, Losses: ${score.losses}, Ties: ${score.ties}`);
+        }
+    
+        ">Scissors</button>
+
+        <button title="clear" onclick="
+            if (confirm('Are you sure you want to clear your record?')) {
+                score.wins = 0; score.losses = 0; score.ties = 0;
+                alert('Your record was cleared successfully');
+            }
+        ">Reset Score</button>
+
+        <script>
+
+        const score = {
+            wins: 0,
+            losses: 0,
+            ties: 0
+            }
+
+        </script>
+    
+</body>
+</html>
