@@ -6,10 +6,36 @@
     <title><DOM-PROJECTS></DOM-PROJECTS></title>
 </head>
 <body>
+    <p>YouTube Subscribe Button</p>
+    <button onclick="
+         subscribe();
+    " class="button" 
+    >Subscribe</button>
+    
     <script>
-        document.body.innerHTML += '<h1>i got my smart tv.<h1/>';
-        document.body.innerHTML += '<p>hello there.<p/>';
-        document.body.innerHTML += '<button>Given</button>' + ' ' +'<button>Agim</>';
+    //    const buttonElement = document.querySelector('.button');
+    //    buttonElement.addEventListener('click', function() {
+    //     if (buttonElement.innerHTML === 'Subscribe') {
+    //         buttonElement.innerHTML = 'Subscribed';
+    //     } else {
+    //         buttonElement.innerHTML = 'Subscribe';
+    //     }
+    //    }); 
+
+    //    if there are spaces between the button(eg. subscribe), use 'document.innerText' instead of .innerHTML as used in the  first line of buttonElement.innerHTML for the first 'subscribe' Also note that if you are using eventlistener, 'onclick' is not needed, but it is neededwith a fucntion, as seen in this example.
+
+    // TO USE A FUNCTION INSTEAD,
+    function subscribe() {
+       const buttonElement = document.querySelector('button');
+       
+        if (buttonElement.innerHTML === 'Subscribe') {
+            buttonElement.innerHTML = 'Subscribed';
+        } else {
+            buttonElement.innerHTML = 'Subscribe';
+        }
+    
+    }
+       
     </script>
 </body>
 </html>
