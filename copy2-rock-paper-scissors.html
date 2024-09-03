@@ -20,6 +20,8 @@
         if (storedData) {
             score = JSON.parse(storedData);
         }
+        // document.querySelector('.js-result').innerHTML = `You ${result}`;
+
         document.querySelector('.js-score')
         .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
         </script>
@@ -61,8 +63,13 @@
              localStorage.setItem('score', JSON.stringify(score));
         }
 
+        document.querySelector('.js-result').innerHTML = `${result}`;
+
+        document.querySelector('.js-moves').innerHTML = `You Rock - ${computerMove} Computer`
+
         document.querySelector('.js-score')
         .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+
             ">Rock</button>
 
     <button onclick="
@@ -100,6 +107,9 @@
             score.wins+= 1
              localStorage.setItem('score', JSON.stringify(score));
         }
+        document.querySelector('.js-result').innerHTML = `${ressult}`;
+
+        document.querySelector('.js-moves').innerHTML = `You Paper - ${compputerMove} Computer`
 
         document.querySelector('.js-score')
         .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
@@ -140,11 +150,17 @@
              localStorage.setItem('score', JSON.stringify(score));
              
         }
+        document.querySelector('.js-result').innerHTML = `${resssult}`;
+
+        document.querySelector('.js-moves').innerHTML = `You Scissors - ${comppputerMove} Computer`
+
         document.querySelector('.js-score')
         .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
         
         ">Scissors</button>
 
+        <p  class="js-result"></p>
+        <p  class="js-moves"></p>
         <p class="js-score"></p>
 
     
