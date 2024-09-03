@@ -19,7 +19,7 @@
     
 
     <input type="number" placeholder="Cost of order" class="costoder" onkeydown="
-        handleCostkeydown();
+        handleCostkeydown(event);
     "> 
     <button onclick="
         calculateTotal();
@@ -28,8 +28,8 @@
     <p class="totalCost"></p>
 
     <script>
-        
-        function handleCostkeydown() {
+
+        function handleCostkeydown(event) {
             console.log(event.key);
             if (event.key === 'Enter') {
             calculateTotal();
