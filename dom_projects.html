@@ -11,8 +11,36 @@
          subscribe();
     " class="button" 
     >Subscribe</button>
+
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders unders $40 =+ $10 shipping</p>
+    <p>Orders over $40 = FREE shipping</p>
     
+
+    <input type="number" placeholder="Cost of order" class="costoder"> 
+    <button onclick="
+        calculateTotal();
+    ">Calculate</button>
+
+    <p class="totalCost"></p>
+
     <script>
+        function calculateTotal() {
+            const inputElement = document.querySelector('.costoder');
+            let cost = inputElement.value
+
+            if (cost < 40) {
+                cost = cost + 10;
+                document.querySelector('.totalCost').innerHTML = `${cost}`
+            } else {
+                document.querySelector('.totalCost').innerHTML = `${cost}`
+            }
+
+        }
+
+
+
     //    const buttonElement = document.querySelector('.button');
     //    buttonElement.addEventListener('click', function() {
     //     if (buttonElement.innerHTML === 'Subscribe') {
